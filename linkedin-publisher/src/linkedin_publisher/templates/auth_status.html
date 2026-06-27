@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Auth Status - LinkedIn Publisher{% endblock %}
+
+{% block content %}
+<h1>LinkedIn Auth</h1>
+
+{% if error %}
+<div class="error">{{ error }}</div>
+{% endif %}
+
+<section class="panel">
+  <div class="grid">
+    <div>
+      <strong>Connected</strong>
+      <p>{{ "yes" if status.connected else "no" }}</p>
+    </div>
+    <div>
+      <strong>Scopes</strong>
+      <p>{{ status.scopes or "not connected" }}</p>
+    </div>
+    <div>
+      <strong>Expires</strong>
+      <p>{{ status.expires_at or "unknown" }}</p>
+    </div>
+    <div>
+      <strong>Member URN</strong>
+      <p>{{ status.member_urn or "[NEEDS_VERIFICATION]" }}</p>
+    </div>
+  </div>
+  {% if status.needs_member_urn_verification %}
+  <p class="muted">Publishing is blocked until the authenticated member URN is verified and configured as <code>LINKEDIN_MEMBER_URN</code>.</p>
+  {% endif %}
+  <div class="actions">
+    <a class="button" href="/auth/linkedin">Connect LinkedIn</a>
+  </div>
+</section>
+{% endblock %}

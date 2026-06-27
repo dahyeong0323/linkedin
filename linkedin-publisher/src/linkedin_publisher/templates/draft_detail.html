@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}{{ draft.id }} - LinkedIn Publisher{% endblock %}
+
+{% block content %}
+<h1>{{ draft.id }}</h1>
+
+{% if error %}
+<div class="error">{{ error }}</div>
+{% endif %}
+
+<section class="panel">
+  <div class="grid">
+    <div>
+      <strong>Status</strong>
+      <p><span class="status">{{ draft.status.value }}</span></p>
+    </div>
+    <div>
+      <strong>Language</strong>
+      <p>{{ draft.language }}</p>
+    </div>
+    <div>
+      <strong>Created</strong>
+      <p>{{ draft.created_at }}</p>
+    </div>
+    <div>
+      <strong>Approved</strong>
+      <p>{{ draft.approved_at or "not approved" }}</p>
+    </div>
+  </div>
+</section>
+
+<h2>Final Text</h2>
+<section class="panel">
+  <form method="post" action="/drafts/{{ draft.id }}/save">
+    <label for="final_text">Editable final text</label>
+    <textarea id="final_text" name="final_text" required>{{ draft.final_text or draft.draft_text }}</textarea>
+    <p>
+      <label for="revision_note">Revision note</label>
+      <input id="revision_note" name="revision_note" placeholder="optional">
+    </p>
+    <div class="actions">
+      <button type="submit">Save edits</button>
+    </div>
+  </form>
+</section>
+
+<h2>Review Actions</h2>
+<section class="panel">
+  <div class="actions">
+    <form method="post" action="/drafts/{{ draft.id }}/approve">
+      <button type="submit" class="success" {% if draft.status.value != "pending_review" %}disabled{% endif %}>Approve</button>
+    </form>
+    <form method="post" action="/drafts/{{ draft.id }}/reject">
+      <button type="submit" class="danger" {% if draft.status.value not in ["pending_review", "revision_requested"] %}disabled{% endif %}>Reject</button>
+    </form>
+    {% if draft.status.value == "approved" %}
+    <a class="button" href="/drafts/{{ draft.id }}/publish-confirm">Publish</a>
+    {% else %}
+    <button type="button" disabled>Publish</button>
+    {% endif %}
+    <form method="post" action="/drafts/{{ draft.id }}/recover-failed">
+      <button type="submit" class="warning" {% if draft.status.value != "failed" %}disabled{% endif %}>Recover failed</button>
+    </form>
+  </div>
+  <form method="post" action="/drafts/{{ draft.id }}/request-revision" style="margin-top: 16px;">
+    <label for="note">Revision request</label>
+    <input id="note" name="note" placeholder="What should change?">
+    <div class="actions">
+      <button type="submit" class="warning" {% if draft.status.value != "pending_review" %}disabled{% endif %}>Request revision</button>
+    </div>
+  </form>
+</section>
+
+<h2>Source Material</h2>
+<section class="panel pre">{{ draft.source_material or "No source material stored." }}</section>
+
+<h2>Original Draft</h2>
+<section class="panel pre">{{ draft.draft_text }}</section>
+
+<h2>Revision History</h2>
+<section class="panel">
+  {% for revision in revisions %}
+    <p><strong>{{ revision.created_at }}</strong> {{ revision.revision_note or "" }}</p>
+  {% else %}
+    <p class="muted">No revisions yet.</p>
+  {% endfor %}
+</section>
+{% endblock %}

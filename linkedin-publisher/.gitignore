@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+uvicorn*.log
+data/*.db
+data/*.db-*
+data/raw_inputs/*
+!data/raw_inputs/.gitkeep
+data/draft_exports/*
+!data/draft_exports/.gitkeep
+data/published_exports/*
+!data/published_exports/.gitkeep
