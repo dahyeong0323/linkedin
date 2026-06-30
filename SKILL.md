@@ -21,6 +21,10 @@ Before generating or revising a post, read:
 
 Use only the user's provided corpus, style analysis, and raw material. Do not browse. Do not use external examples. Do not introduce facts, people, scenes, claims, or authority that are not present in the raw material.
 
+Ignore citation markers, pasted metadata, markdown artifacts, raw platform links, hashtag URLs, and source UI remnants in the corpus or analysis files. Never reproduce them in the generated post unless the user explicitly asks.
+
+Do not reproduce raw markdown links, hashtag URLs, citation markers, or copied platform artifacts from the corpus. These are source artifacts, not style.
+
 ## Stop Conditions
 
 If raw material is missing, stop and ask the user to provide it.
@@ -60,6 +64,24 @@ Default structure:
 10. Practical implication or advice.
 11. Short, calm ending.
 12. Optional `p.s.` only when it fits the corpus texture.
+
+## Title Defaults
+
+Prefer short, declarative titles that sound like quiet judgment.
+
+Common title shapes:
+
+- A만으로는 B가 되지 않는다
+- 좋은 A는 B하고, 나쁜 A는 C한다
+- 중요한 것은 X다
+- A는 주어지는 것이 아니라 설계하는 것이다
+- A의 뜻밖의 선물
+- A를 이해하라
+- A는 B가 아니다
+
+Use trailing `--` or `---` when it fits the corpus texture.
+
+Do not use clickbait, viral LinkedIn hooks, or overly polished marketing titles.
 
 ## Non-Negotiable Style Guardrails
 

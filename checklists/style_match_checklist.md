@@ -41,6 +41,13 @@ Silently check every generated or revised post against this list before output.
 - Does not use punchy one-liners or excessive spacing.
 - Does not sound like a startup newsletter.
 
+## Artifact Cleanup
+
+- Does not include citation markers.
+- Does not include raw markdown links or hashtag URLs copied from the corpus.
+- Does not include source metadata, UI remnants, or file references.
+- Does not accidentally output analysis-report language.
+
 ## Output
 
 - Outputs final Korean post only unless the user asks for explanation.
