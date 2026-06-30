@@ -1,0 +1,4 @@
+interface:
+  display_name: "Korean Blog Style Writer"
+  short_description: "Owned-corpus Korean blog style replication"
+  default_prompt: "Use $korean-blog-style-writer to turn my raw notes into a Korean blog post that matches my owned corpus style."
