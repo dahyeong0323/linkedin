@@ -48,6 +48,17 @@ Do not fabricate a scene to make the post work.
 6. If revising an existing draft, use `templates/revision_prompt.md`.
 7. Output only the final Korean post unless the user asks for notes or explanation.
 
+## Final Approval Save Workflow
+
+When the user explicitly gives final approval, such as "최종 승인", "최종 승인 떨어짐", or asks to save the approved post:
+
+1. Save the approved final post before sending the final response.
+2. Use the current writing workspace unless the user names another target folder.
+3. Create or reuse a folder named `최종글`.
+4. Save the post as a Markdown file with the pattern `YYYY-MM-DD_제목.md`.
+5. Preserve the approved body as-is. Do not add code fences, commentary, metadata, or style notes inside the saved post unless the user requested them.
+6. In the final response, briefly confirm the saved path.
+
 ## Core Shape
 
 Default structure:
