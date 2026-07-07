@@ -73,7 +73,7 @@
 
 이 구성은 글마다 다르게 보이지만, 핵심 템포는 놀라울 정도로 일정하다. 예를 들어 사례형 글은 초반 30~40%를 사례 설명에 쓰고, 중반에서 구조적 원리를 뽑고, 후반 20~30%에서 독자 적용과 결론으로 닫는다. 반면 관찰형 글은 사례가 하나가 아니라 “여러 사람에게서 반복적으로 본 장면”으로 바뀌지만, 결국 같은 구조를 따른다. “이런 분들을 자주 만난다 → 같은 고민이 반복된다 → 그런데 문제는 표면이 아니다 → 따라서 이렇게 봐야 한다”는 식이다. 
 
-번호는 보고서의 차가운 질서가 아니라, 사고의 진행을 보조하는 손잡이처럼 쓰인다. 중요한 점은 번호를 붙였다고 각 번호가 꼭 한 문단으로 끝나지 않는다는 것이다. 하나의 번호 안에서 짧은 문단 여러 개로 나뉘기도 하고, 반대로 번호 없이 일반 문단만으로 밀어붙이는 글도 일부 존재한다. 그러나 번호가 붙을 때 공통적으로 일어나는 효과는 **독자가 “지금 논리가 하나씩 정리되고 있다”는 안도감**을 느끼게 만든다는 점이다. 이 점 때문에 Skill에서 번호 사용은 선택이 아니라 핵심 옵션으로 두는 것이 좋다. 특히 사례를 원리화할 때 번호는 매우 효과적이다. 
+번호는 보고서의 차가운 질서가 아니라, 사고의 진행을 보조하는 손잡이처럼 쓰인다. 중요한 점은 번호를 붙였다고 각 번호가 꼭 한 문단으로 끝나지 않는다는 것이다. 더 중요한 점은 번호가 `1. 소제목`처럼 항목 제목을 세우는 방식이 아니라, `1.` 뒤에 바로 문장이 이어지는 문단 진행에 가깝다는 점이다. 하나의 번호 안에서 짧은 문단 여러 개로 나뉘기도 하고, 반대로 번호 없이 일반 문단만으로 밀어붙이는 글도 일부 존재한다. 그러나 번호가 붙을 때 공통적으로 일어나는 효과는 **독자가 “지금 논리가 하나씩 정리되고 있다”는 안도감**을 느끼게 만든다는 점이다. 이 점 때문에 Skill에서 번호 사용은 선택이 아니라 핵심 옵션으로 두는 것이 좋다. 특히 사례를 원리화할 때 번호는 매우 효과적이다. 
 
 Olive Better 같은 리테일 관찰형 입력 재료를 이 구조에 넣을 때는 다음과 같은 재배치가 가능하다. 먼저 매장 방문 장면을 깔고, Olive Young과 Olive Better의 표면 차이를 묘사한 뒤, “그런데 더 중요한 질문은 왜 굳이 별도 브랜드를 만들었는가”로 전환한다. 이후 목적형 구매와 탐색형 소비의 차이, 뷰티 리테일과 웰니스 리테일의 차이, 오프라인 매장의 정당성, 선물용 편집샵으로서의 가능성을 क्रम차적으로 전개하면 코퍼스에 매우 가까운 논리 리듬이 형성된다. 즉 새 주제에서도 핵심은 관찰이 아니라 **관찰을 구조로 바꾸는 능력**이다. 
 
@@ -204,10 +204,10 @@ Default logic flow:
 12. If it suits the context, add a short p.s. line.
 
 [5] NUMBERING
-- Use numbered sections often when the logic benefits from it.
-- Numbering should feel like guided thinking, not a stiff report.
+- Use numbered paragraphs when the logic benefits from it; do not create extra body subheadings.
+- Numbering should feel like guided thinking, not a stiff report or a list of titled sections.
 - Each numbered point may contain multiple paragraphs.
-- Within a numbered section, you may also use “첫째, 둘째, 셋째”.
+- Within a numbered paragraph, you may also use “첫째, 둘째, 셋째” when it fits the corpus.
 
 [6] SENTENCE RHYTHM
 - Mix short and medium-length sentences.
